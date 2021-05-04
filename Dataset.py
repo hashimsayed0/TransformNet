@@ -24,7 +24,7 @@ import argparse
 class Dataset:
     def __init__(self, transformType='all', transformNum=5):
         
-        self.transformType = transformType # 'rotation' or 'all'
+        self.transformType = transformType # 'rotation' or  'all'
         self.transformNum = transformNum # 5 or 10 for transformation; 2,4,8 for rotation
 
         # load dataset
