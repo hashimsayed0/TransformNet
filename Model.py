@@ -10,9 +10,6 @@ from tensorflow.keras import regularizers
 from tensorflow.keras.callbacks import LearningRateScheduler, CSVLogger
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn import svm, metrics
-import PIL, PIL.ImageOps, PIL.ImageEnhance, PIL.ImageDraw
-import torch
-from PIL import Image
 from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 from tensorflow.keras.applications.vgg16 import VGG16
 from skimage import transform
