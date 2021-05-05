@@ -84,7 +84,7 @@ elif (args.transformation_type is not None and args.transformation_num is not No
 #Printing the training settings
 print('Transformation type: ' + transformType)
 print('Transformation number: ' + str(transformNum))
-
+print('Preprocessing in progress')
 
 #Creating dataset with chosen or default settings
 dataset = Dataset(transformType=transformType, transformNum=transformNum)
