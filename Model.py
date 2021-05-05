@@ -118,7 +118,7 @@ class Model:
             log: training log
         """
         #Saving training log to csv file
-        csv_logger = CSVLogger('pretext_log', append=True, separator=';')
+        csv_logger = CSVLogger('experiments/pretext_log', append=True, separator=';')
         
         #Creating model
         model = self.get_conv_model()
@@ -135,7 +135,7 @@ class Model:
                         shuffle = True, callbacks = [LearningRateScheduler(self.lr_schedule), csv_logger])
         
         #Saving model to use later to train on downstream task
-        model.save('pretext')
+        model.save('experiments/pretext')
 
         return log
     
@@ -149,7 +149,7 @@ class Model:
         """
         
         #Loading model previously trained for pretext task
-        model = tf.keras.models.load_model('pretext')
+        model = tf.keras.models.load_model('experiments/pretext')
 
         #Retrieving the layer until which downstream task should be trained
         l = model.get_layer(self.feature_layer).output
@@ -188,9 +188,9 @@ class Model:
         """
         #Based on setting, save csv file with training log
         if train_features:
-            csv_logger = CSVLogger('downstream_unfreezed_log', append=True, separator=';')
+            csv_logger = CSVLogger('experiments/downstream_unfreezed_log', append=True, separator=';')
         else:
-            csv_logger = CSVLogger('downstream_freezed_log', append=True, separator=';')
+            csv_logger = CSVLogger('experiments/downstream_freezed_log', append=True, separator=';')
         
         #build model
         cls_model = self.get_cls_model()
@@ -218,9 +218,9 @@ class Model:
         
         #Save models with relevant names
         if train_features:
-            cls_model.save('downstream_unfreezed')
+            cls_model.save('experiments/downstream_unfreezed')
         else:
-            cls_model.save('downstream_freezed')
+            cls_model.save('experiments/downstream_freezed')
         
         return cls_log
 

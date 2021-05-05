@@ -113,12 +113,12 @@ downstream_freezed_log = model.train_cls(trainX, trainy_binary, testX, testy_bin
 
 #Plotting training accuracy in downstream task
 plot_training(name = 'Train accuracy (Downstream)',
-                filename = 'train_plot',
+                filename = 'experiments/train_plot',
                 Unfreezed = downstream_unfreezed_log.history['accuracy'],
                 Freezed = downstream_freezed_log.history['accuracy'])
 
 #Plotting validation accuracy in downstream task
 plot_training(name = 'Validation accuracy (Downstream)',
-                filename = 'validation_plot',
+                filename = 'experiments/validation_plot',
                 Unfreezed = downstream_unfreezed_log.history['val_accuracy'],
                 Freezed = downstream_freezed_log.history['val_accuracy'])
