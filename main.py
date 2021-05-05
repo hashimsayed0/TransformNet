@@ -1,3 +1,4 @@
+#import libraries
 from keras.datasets import cifar10
 import numpy as np
 import os
@@ -9,8 +10,6 @@ from tensorflow.keras import optimizers
 from tensorflow.keras import regularizers
 from tensorflow.keras.callbacks import LearningRateScheduler, CSVLogger
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from sklearn import svm, metrics
-from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 from tensorflow.keras.applications.vgg16 import VGG16
 from skimage import transform
 import skimage
@@ -34,6 +33,7 @@ def plot_training(**kwargs):
     """
     plt.figure(figsize = (10, 10))
      
+    #plot each variable passed on
     for k, v in kwargs.items():
         if k != 'name' and k != 'filename':
             plt.plot(v, label=k)
@@ -45,6 +45,8 @@ def plot_training(**kwargs):
     plt.ylabel('Accuracy')
     plt.ylim([0, 1])
     plt.legend(loc='lower right')
+    
+    #save figure if filename is given
     if 'filename' in kwargs:
         plt.savefig(kwargs['filename'])
 

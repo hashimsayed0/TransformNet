@@ -1,3 +1,4 @@
+#import libraries
 from keras.datasets import cifar10
 import numpy as np
 import os
@@ -9,8 +10,6 @@ from tensorflow.keras import optimizers
 from tensorflow.keras import regularizers
 from tensorflow.keras.callbacks import LearningRateScheduler, CSVLogger
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from sklearn import svm, metrics
-from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 from tensorflow.keras.applications.vgg16 import VGG16
 from skimage import transform
 import skimage
@@ -195,7 +194,6 @@ class Dataset:
                 transw_index = np.random.randint(6,9)
 
                 #indices for translation
-                #6 - hp, 7 - hn, 8 - vp, 9 - vn
                 trans_indices = []
                 if transh_index == 7:
                     trans_indices.append(6)
