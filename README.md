@@ -10,6 +10,12 @@ This series of different type of experiments will help us demonstrate the recogn
 ## Requirements
 All requirements are stated in the environment.yml file using which you can create a conda environment that contains all required packages.
 
+### Main packages
+python=3.6.12
+tensorflow=2.1.0
+scikit-image=0.17.2
+keras=2.3.1
+
 ## Steps to run our code
 1. Clone this repository: `git clone https://github.com/hashimsayed0/TransformNet.git`
 2. Change directory to this project folder: `cd TransformNet`
@@ -28,4 +34,4 @@ Models, training logs and plots will be saved in experiments folder after the pr
 The code uses CIFAR-10 dataset from keras datasets. So you don't have to download the dataset yourself.
 
 ## Credits
-We used code from [this repository](https://github.com/WaretleR/SelfSupervision). Besides, we wrote our own code for preprocessing, building and training more models, plotting varied data and experimenting with more hyperparameters.
+We used code from [this repository](https://github.com/WaretleR/SelfSupervision). Besides that, we wrote our own code for preprocessing, building and training more models, plotting varied data and experimenting with more hyperparameters.
