@@ -12,10 +12,16 @@ All requirements are stated in the environment.yml file using which you can crea
 
 ## Steps to run our code
 1. Clone this repository: `git clone https://github.com/hashimsayed0/TransformNet.git`
-2. Create conda environment from environment.yml file: `conda env create -f environment.yml`
-3. Activate the environment, mash: `conda activate mash`
-4. You can now run the main.py file with 2 optional arguments, transformation_type (all or rotation) and transformation_num (2, 4, 8 for rotation, 5 or 10 for all transformations)
+2. Change directory to this project folder: `cd TransformNet`
+3. Create conda environment from environment.yml file: `conda env create -f environment.yml`
+4. Activate the environment, mash: `conda activate mash`
+5. You can now run the main.py file with 2 optional arguments, transformation_type (all or rotation) and transformation_num (2, 4, 8 for rotation, 5 or 10 for all transformations)
    - To run the project with default settings (2 rotations), do not provide any optional arguments: `python main.py`
    - To run the project with 5 all transformations for example, use: `python main.py -t all -n 5`
    - To run the project with 8 rotations for example, use: `python main.py -t rotation -n 8`
 
+## Dataset
+The code uses CIFAR-10 dataset from keras datasets. So you don't have to download the dataset yourself.
+
+## Credits
+This codebase was built on
