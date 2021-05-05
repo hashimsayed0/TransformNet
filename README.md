@@ -11,10 +11,10 @@ This series of different type of experiments will help us demonstrate the recogn
 All requirements are stated in the environment.yml file using which you can create a conda environment that contains all required packages.
 
 ### Main packages
-python=3.6.12
-tensorflow=2.1.0
-scikit-image=0.17.2
-keras=2.3.1
+* python=3.6.12
+* tensorflow=2.1.0
+* scikit-image=0.17.2
+* keras=2.3.1
 
 ## Steps to run our code
 1. Clone this repository: `git clone https://github.com/hashimsayed0/TransformNet.git`
