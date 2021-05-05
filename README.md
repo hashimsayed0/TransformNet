@@ -28,7 +28,7 @@ All requirements are stated in the environment.yml file using which you can crea
    - To run the project with 8 rotations for example, use: `python main.py -t rotation -n 8`
 
 ### Note
-Models, training logs and plots will be saved in experiments folder after the program runs successfully
+Models, training logs and plots will be saved in experiments folder once the program runs successfully
 
 ## Dataset
 The code uses CIFAR-10 dataset from keras datasets. So you don't have to download the dataset yourself.
